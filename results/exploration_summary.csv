@@ -1,0 +1,7 @@
+agent,epsilon,convergence_episode,final_mean_reward,final_mean_rolling_std,greedy_total_reward,path_risk_level
+Q-learning,0.01,350,-13.400000,3.603883,-13.000000,aggressive
+Q-learning,0.10,131,-37.100000,62.275895,-13.000000,aggressive
+Q-learning,0.20,80,-58.200000,102.523511,-13.000000,aggressive
+SARSA,0.01,370,-15.400000,4.516053,-15.000000,moderate
+SARSA,0.10,265,-30.100000,16.527638,-17.000000,moderate
+SARSA,0.20,182,-41.400000,34.761395,-17.000000,moderate

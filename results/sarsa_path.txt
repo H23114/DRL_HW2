@@ -1,0 +1,26 @@
+SARSA final greedy path
+=======================
+
+Map legend:
+S = Start
+G = Goal
+C = Cliff
+* = Final greedy path
+
+Path map:
+. . . . . . . . . . . .
+* * * * * * * * * * * *
+* . . . . . . . . . . *
+S C C C C C C C C C C G
+
+Greedy policy:
+v > > ^ > > > > > > > v
+> > > > > > > > > > > v
+^ ^ < > ^ < ^ < > > > v
+S C C C C C C C C C C G
+
+Path sequence:
+(3,0) -> (2,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3) -> (1,4) -> (1,5) -> (1,6) -> (1,7) -> (1,8) -> (1,9) -> (1,10) -> (1,11) -> (2,11) -> (3,11)
+
+Interpretation:
+This path shows a moderate trade-off: it approaches the cliff in some segments but does not hug the cliff for the entire route.

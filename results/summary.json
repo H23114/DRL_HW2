@@ -1,0 +1,158 @@
+{
+  "config": {
+    "rows": 4,
+    "cols": 12,
+    "episodes": 500,
+    "max_steps_per_episode": 1000,
+    "alpha": 0.1,
+    "gamma": 0.9,
+    "epsilon": 0.1,
+    "seed": 42,
+    "moving_average_window": 10,
+    "rolling_std_window": 10,
+    "analysis_runs": 10,
+    "exploration_epsilons": [
+      0.01,
+      0.1,
+      0.2
+    ]
+  },
+  "q_learning": {
+    "final_episode_reward": -13.0,
+    "greedy_total_reward": -13.0,
+    "greedy_path": [
+      [
+        3,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "path_risk_note": "This path is relatively aggressive: it spends many steps directly above the cliff, which is shorter but riskier during exploration.",
+    "stability_final_mean_reward": -77.2,
+    "stability_final_rolling_std": 48.36335274803834
+  },
+  "sarsa": {
+    "final_episode_reward": -17.0,
+    "greedy_total_reward": -15.0,
+    "greedy_path": [
+      [
+        3,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        11
+      ]
+    ],
+    "path_risk_note": "This path shows a moderate trade-off: it approaches the cliff in some segments but does not hug the cliff for the entire route.",
+    "stability_final_mean_reward": -27.5,
+    "stability_final_rolling_std": 14.663144903634054
+  }
+}

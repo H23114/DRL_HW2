@@ -1,0 +1,26 @@
+Q-learning final greedy path
+============================
+
+Map legend:
+S = Start
+G = Goal
+C = Cliff
+* = Final greedy path
+
+Path map:
+. . . . . . . . . . . .
+. . . . . . . . . . . .
+* * * * * * * * * * * *
+S C C C C C C C C C C G
+
+Greedy policy:
+v < > > < > > > ^ > > v
+^ > ^ > ^ > > v > v > v
+> > > > > > > > > > > v
+S C C C C C C C C C C G
+
+Path sequence:
+(3,0) -> (2,0) -> (2,1) -> (2,2) -> (2,3) -> (2,4) -> (2,5) -> (2,6) -> (2,7) -> (2,8) -> (2,9) -> (2,10) -> (2,11) -> (3,11)
+
+Interpretation:
+This path is relatively aggressive: it spends many steps directly above the cliff, which is shorter but riskier during exploration.

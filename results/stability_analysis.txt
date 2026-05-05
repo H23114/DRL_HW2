@@ -1,0 +1,16 @@
+Stability analysis summary
+==========================
+
+More stable method near the end of training: SARSA
+
+How stability is measured:
+- Mean reward across repeated runs reflects typical learning progress.
+- Rolling reward standard deviation reflects how strongly rewards fluctuate during training.
+
+Q-learning final mean reward: -77.200
+Q-learning final rolling std: 48.363
+SARSA final mean reward: -27.500
+SARSA final rolling std: 14.663
+
+Interpretation:
+SARSA usually reflects exploration more directly because its update target uses the actual next epsilon-greedy action. If exploration might step near the cliff and incur large penalties, SARSA learns to account for that risk during training, so it often adopts a more conservative route. Q-learning updates toward the greedy max next action instead, so it can look more optimistic about risky states and may prefer a shorter path closer to the cliff.

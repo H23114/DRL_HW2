@@ -1,0 +1,21 @@
+Exploration analysis draft
+==========================
+
+This experiment compares epsilon = 0.01, 0.10, and 0.20 under the same environment and learning-rate settings.
+A larger epsilon means the agent explores more often, so it sees more risky transitions near the cliff but also learns from a broader range of states.
+
+Key observations by algorithm:
+- Q-learning:
+  epsilon=0.01, convergence episode=350, final mean reward=-13.400, path=aggressive
+  epsilon=0.10, convergence episode=131, final mean reward=-37.100, path=aggressive
+  epsilon=0.20, convergence episode=80, final mean reward=-58.200, path=aggressive
+- SARSA:
+  epsilon=0.01, convergence episode=370, final mean reward=-15.400, path=moderate
+  epsilon=0.10, convergence episode=265, final mean reward=-30.100, path=moderate
+  epsilon=0.20, convergence episode=182, final mean reward=-41.400, path=moderate
+
+Report draft:
+Increasing epsilon generally increases exploration, which can slow apparent convergence because the agent keeps taking non-greedy actions for longer. However, additional exploration can also prevent the agent from committing too early to a poor local behavior.
+For Q-learning, a higher epsilon mainly changes the data it collects, while the update target still assumes the best next action through max_a' Q(s', a'). Because of this optimistic target, Q-learning often prefers shorter routes close to the cliff even when exploration is still active.
+For SARSA, a higher epsilon has a more direct effect because the update target uses the actual next epsilon-greedy action. If exploratory moves can step into the cliff, SARSA learns that the nearby states are effectively more dangerous, so it often shifts toward a safer and more conservative final path.
+In practice, epsilon therefore affects not only final reward but also policy character: small epsilon values tend to favor faster exploitation, while larger epsilon values usually produce slower convergence and can encourage safer behavior, especially for SARSA.
