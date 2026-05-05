@@ -251,17 +251,17 @@ SARSA 直接學習「目前這個帶探索的策略」的價值，因此特別�
 - SARSA 學到的路徑較保守，單次 greedy reward 略差，但在整體訓練過程中的平均表現與穩定性更好
 - exploration 越強，兩者的最終平均 reward 都會下降，但 Q-learning 的波動通常比 SARSA 更劇烈
 
-### 六、結論要求
+## 9. 最終總結
 
-#### 哪一種方法收斂較快
+### 哪一種方法收斂較快
 
 就本次實驗的估計收斂回合而言，Q-learning 整體上收斂較快。在三組 epsilon 下，Q-learning 的 convergence episode 都小於 SARSA，表示它較快形成固定路徑策略。
 
-#### 哪一種方法較穩定
+### 哪一種方法較穩定
 
 SARSA 較穩定。以正式實驗 `epsilon = 0.1` 為例，SARSA 的 final rolling std 為 `14.663`，遠低於 Q-learning 的 `48.363`；在 exploration 分析中，SARSA 在各 epsilon 下的波動也普遍較小。
 
-#### 在何種情境下應選擇 Q-learning 或 SARSA
+### 在何種情境下應選擇 Q-learning 或 SARSA
 
 - 若環境較安全、探索成本低，而且希望盡可能逼近理論最優策略，則 Q-learning 較適合
 - 若環境中存在高風險區域，且 exploration 可能造成嚴重代價，則 SARSA 較適合，因為它能更真實反映探索風險，並學到較穩定保守的策略
