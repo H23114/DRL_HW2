@@ -1,4 +1,5 @@
-# DRL HW2: Q-learning 與 SARSA 在 Cliff Walking 的比較
+# DRL HW4 正確網址 https://github.com/H23114/DRL_HW4.git
+不好意思，作業繳交後發現連結一直跳轉不正確，只好將網址附上，謝謝助教！
 
 本專案為深度強化學習作業二的最終繳交版本，主題為比較 Q-learning 與 SARSA 在 Cliff Walking / Gridworld 環境中的學習表現、穩定性與 exploration 影響。
 
